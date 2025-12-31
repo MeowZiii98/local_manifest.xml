@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="github" fetch="https://github.com/" />
+  <remote name="gitlab" fetch="https://gitlab.com/" />
+
+  <project name="MeowZiii98/android_device_oneplus_aston" path="device/oneplus/aston" remote="github" revision="infinity-qpr1" />
+
+  <project name="gaurav-paul9/android_device_oneplus_sm8550-common" path="device/oneplus/sm8550-common" remote="github" revision="infclean" />
+
+  <project name="shipukacapri/android_kernel_oneplus_sm8550" path="kernel/oneplus/sm8550" remote="github" revision="infinity" />
+    
+  <project name="LineageOS/android_kernel_oneplus_sm8550-modules" path="kernel/oneplus/sm8550-modules" remote="github" revision="lineage-21" />
+  <project name="gaurav-paul9/android_kernel_oneplus_sm8550-devicetrees" path="kernel/oneplus/sm8550-devicetrees" remote="github" revision="lineage-21" />
+
+  <project name="shipukacapri/android_hardware_oplus" path="hardware/oplus" remote="github" revision="infinity-qpr1" />
+
+  <project name="inferno0230/hardware_dolby" path="hardware/dolby" remote="github" revision="sixteen" />
+  <project name="TheMuppets/proprietary_vendor_oneplus_aston" path="vendor/oneplus/aston" remote="github" revision="lineage-21" />
+  <project name="NoPrincessHere/proprietary_vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="gitlab" revision="sixteen" />
+</manifest>
