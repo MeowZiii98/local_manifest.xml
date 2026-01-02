@@ -1,23 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-    <remote name="meow" fetch="https://github.com/MeowZiii98" />
+#!/bin/bash
+set -e
 
-    <remote name="gh_common" fetch="https://github.com/" />
-    <remote name="gitlab" fetch="https://gitlab.com/" />
+rm -rf .repo/local_manifests
 
-    <project path="device/oneplus/aston" name="android_device_oneplus_aston" remote="meow" revision="infinity-qpr1" />
-    
-    <project path="kernel/oneplus/sm8550" name="android_kernel_oneplus_sm8550" remote="meow" revision="infinity" />
-    
-    <project path="hardware/oplus" name="android_hardware_oplus" remote="meow" revision="infinity-qpr1" />
-    
-    <project path="vendor/oneplus/aston" name="proprietary_vendor_oneplus_aston" remote="meow" revision="lineage-23.0" />
+repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 
-    <project path="device/oneplus/sm8550-common" name="gaurav-paul9/android_device_oneplus_sm8550-common" remote="gh_common" revision="infclean" />
-    <project path="kernel/oneplus/sm8550-modules" name="LineageOS/android_kernel_oneplus_sm8550-modules" remote="gh_common" revision="lineage-21" />
-    <project path="kernel/oneplus/sm8550-devicetrees" name="gaurav-paul9/android_kernel_oneplus_sm8550-devicetrees" remote="gh_common" revision="lineage-21" />
-    
-    <project path="hardware/dolby" name="inferno0230/hardware_dolby" remote="gh_common" revision="sixteen" />
-    <project path="vendor/oneplus/sm8550-common" name="NoPrincessHere/proprietary_vendor_oneplus_sm8550-common" remote="gitlab" revision="sixteen" />
-</manifest>
+git clone https://github.com/MeowZiii98/aston_local_manifest --depth 1 -b main .repo/local_manifests
 
+/opt/crave/resync.sh
+
+source build/envsetup.sh
+
+lunch infinity_aston-bp3a-userdebug
+
+m bacon
