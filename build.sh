@@ -14,5 +14,5 @@ git clone https://github.com/MeowZiii98/aston_local_manifest --depth 1 -b main .
 /opt/crave/resync.sh
 
 source build/envsetup.sh
-lunch infinity_aston-bp3a-userdebug
+lunch infinity_aston-userdebug
 m bacon
